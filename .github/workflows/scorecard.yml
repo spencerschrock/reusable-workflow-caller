@@ -17,4 +17,4 @@ jobs:
       id-token: write
     uses: spencerschrock/reusable-workflow-test/.github/workflows/scorecard.yml@1e6350db0a579a68b5ccd6a9e055371cd3aa7fd9
     with:
-          repo-token: ${{ github.token }}
+          repo_token: ${{ github.token }}
