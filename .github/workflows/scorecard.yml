@@ -10,9 +10,21 @@ permissions: read-all
 jobs:
   analysis:
     name: Scorecard analysis
-    permissions: read-all
+    permissions:
       # Needed to upload the results to code-scanning dashboard.
       security-events: write
       # Needed to publish results and get a badge (see publish_results below).
       id-token: write
+      # Needed cause reusable workflow global permissions is read-all
+      actions: read
+      checks: read
+      contents: read
+      deployments: read
+      issues: read
+      discussions: read
+      packages: read
+      pages: read
+      pull-requests: read
+      repository-projects: read
+      statuses: read
     uses: spencerschrock/reusable-workflow-test/.github/workflows/scorecard.yml@1e6350db0a579a68b5ccd6a9e055371cd3aa7fd9
