@@ -1,0 +1,18 @@
+name: Scorecard supply-chain security
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+# Declare default permissions as read only.
+permissions: read-all
+
+jobs:
+  analysis:
+    name: Scorecard analysis
+    permissions:
+      # Needed to upload the results to code-scanning dashboard.
+      security-events: write
+      # Needed to publish results and get a badge (see publish_results below).
+      id-token: write
+    uses: spencerschrock/reusable-workflow-test/.github/workflows/scorecard.yml@1e6350db0a579a68b5ccd6a9e055371cd3aa7fd9
