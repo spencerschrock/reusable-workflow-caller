@@ -27,4 +27,4 @@ jobs:
       pull-requests: read
       repository-projects: read
       statuses: read
-    uses: spencerschrock/reusable-workflow-test/.github/workflows/scorecard.yml@9378feef22583c4b7baf3baf257d50a108cc5a35
+    uses: spencerschrock/reusable-workflow-test/.github/workflows/scorecard.yml@1e6350db0a579a68b5ccd6a9e055371cd3aa7fd9
